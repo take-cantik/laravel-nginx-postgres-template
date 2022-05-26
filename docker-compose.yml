@@ -23,9 +23,9 @@ services:
         volume:
           nocopy: true
     environment:
-      - DB_CONNECTION=postgres
+      - DB_CONNECTION=pgsql
       - DB_HOST=db
-      - DB_PORT=3306
+      - DB_PORT=5432
       - DB_DATABASE=${DB_NAME:-laravel_local}
       - DB_USERNAME=${DB_USER:-phper}
       - DB_PASSWORD=${DB_PASS:-secret}
@@ -54,8 +54,8 @@ services:
       context: .
       dockerfile: ./infra/docker/postgres/Dockerfile
     ports:
-      - target: 3306
-        published: ${DB_PORT:-3306}
+      - target: 5432
+        published: ${DB_PORT:-5432}
         protocol: tcp
         mode: host
     volumes:

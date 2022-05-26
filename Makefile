@@ -121,7 +121,7 @@ yarn-hot:
 db:
 	docker compose exec db bash
 sql:
-	docker compose exec db bash -c 'psql -u $$POSTGRES_USER -p$$POSTGRES_PASSWORD $$POSTGRES_DATABASE'
+	docker compose exec db bash -c 'psql -U $$POSTGRES_USER -W$$POSTGRES_PASSWORD -d$$POSTGRES_DATABASE'
 redis:
 	docker compose exec redis redis-cli
 ide-helper:
