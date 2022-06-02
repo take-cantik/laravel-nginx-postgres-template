@@ -65,7 +65,7 @@ services:
         volume:
           nocopy: true
     environment:
-      - POSTGRES_DATABASE=${DB_NAME:-laravel_local}
+      - POSTGRES_DB=${DB_NAME:-laravel_local}
       - POSTGRES_USER=${DB_USER:-phper}
       - POSTGRES_PASSWORD=${DB_PASS:-secret}
       - POSTGRES_ROOT_PASSWORD=${DB_PASS:-secret}
